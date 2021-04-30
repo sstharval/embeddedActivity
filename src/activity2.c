@@ -1,4 +1,4 @@
-#define F_CPU 1600000UL
+#define F_CPU 16000000UL 	 	/**< Clock Frequency of MCU is 16 MHz */
 #include <avr/io.h>
 #include <util/delay.h>
 #include "activity1.h"
@@ -6,11 +6,11 @@
 
 
 
+
 void Init_ADC(void){
 ADMUX = (1<<REFS0); //For Aref = AVcc
 ADCSRA=(1<<ADEN)|(1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0);
 }
-
 
 uint16_t readADC(uint8_t ch)
 {
@@ -25,10 +25,7 @@ uint16_t readADC(uint8_t ch)
     ADCSRA |= (1<<ADIF);
     return(ADC);
 }
-/**
- * @brief activity description
- * 
- */
+
 void activity2(void){
     Init_ADC();
     uint16_t tempValue;

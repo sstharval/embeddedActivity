@@ -8,7 +8,9 @@
  * @copyright Copyright (c) 2021
  * 
  */
-#define F_CPU 16000000UL
+#include "projectConfig.h"  //MCU clock is defined in this header as provided by BHARATH SIR
+#define F_CPU 16000000UL 	 	/**< Clock Frequency of MCU is 16 MHz */
+
 #include "utils_act.h"
 #include "inc/activity1.h"
 #include "inc/activity2.h"
@@ -37,11 +39,11 @@ int main(void)
  */
 void setUp(void){
     DDRB |= (1<<PB0); //Led indicating Passenger is seated
-    DDRB |= (1<<PB1); //Led Indication Heater is ON
+    DDRB |= (1<<PB1); //Led Indication Heater is ON and also output to CRO
     DDRD &= ~(1<<PD0); //Input switch taking from seat sensor
     DDRD &= ~(1<<PD2); //Input for Switching on the Heater.
     PORTD |= (1<<PD0);
     PORTD |= (1<<PD2);
-    DDRC&=~(1<<PC0);
-    PORTC|=(1<<PC0);    //ADC Channel0
+    DDRC&=~(1<<PC1);
+    PORTC|=(1<<PC1);    //ADC Channel0
 }

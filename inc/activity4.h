@@ -1,17 +1,28 @@
 #ifndef __ACTIVITY_4_H
 #define __ACTIVITY_4_H
-
 /**
- * @brief activity1 code; 
- * @Description - switch presses and light glows indicates, the person is sitting on chair
- * when heater pressed is ON, the file gets uploaded
+ * @brief function to define the communication channel baud rate
+ * Baud Rate - defines the rate at which bits are transferred.
+ * @param ubrr_value 
  */
-void activity4(void) ;
+//void USARTINIT(uint16_t value_ubbr);
 /**
- * @brief activity 2 code
- * @Description - 
+ * @brief to take character value from serial monitor
  * 
+ * @return char 
  */
-void activity4(void) ;
+char USARTReadChar();
+/**
+ * @brief USed for writing data on serial Monitor
+ * 
+ * @param data 
+ */
+//void USARTWriteChar( uint16_t data);
+/**
+ * @brief activity4 code; 
+ * @Description - Setup of communication channels
+ */
+void activity4( int temperature_read) ;
+
 
 #endif /*__ACTIVITY_H*/

@@ -5,6 +5,6 @@
  * Can defend Macros in Future accordingly
  */
 
-c 	/**< Clock Frequency of MCU is 16 MHz */
+#define F_CPU 16000000UL 	 	/**< Clock Frequency of MCU is 16 MHz */
 
 #endif /* __PROJECT_CONFIG_H__ */

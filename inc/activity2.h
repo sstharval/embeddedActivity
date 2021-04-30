@@ -10,6 +10,8 @@
  */
 #ifndef __ACTIVITY_2_H
 #define __ACTIVITY_2_H
+
+
 /**
  * @brief Register to store the value of ADC input
  * 
