@@ -8,7 +8,6 @@
  * @copyright Copyright (c) 2021
  * 
  */
-#include "projectConfig.h"  //MCU clock is defined in this header as provided by BHARATH SIR
 #define F_CPU 16000000UL 	 	/**< Clock Frequency of MCU is 16 MHz */
 
 #include "utils_act.h"

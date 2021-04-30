@@ -22,7 +22,7 @@ char USARTReadChar();
  * @brief activity4 code; 
  * @Description - Setup of communication channels
  */
-//void activity4(uint16_t temperature_read) ;
+void activity4(int temperature_read) ;
 
 
 #endif /*__ACTIVITY_H*/
