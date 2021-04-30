@@ -10,11 +10,10 @@
  */
 #define F_CPU 16000000UL 	 	/**< Clock Frequency of MCU is 16 MHz */
 
-#include "utils_act.h"
-#include "inc/activity1.h"
-#include "inc/activity2.h"
-#include "inc/activity3.h"
-#include "inc/activity4.h"
+#include "activity1.h"
+#include "activity2.h"
+#include "activity3.h"
+#include "activity4.h"
 
 
 
