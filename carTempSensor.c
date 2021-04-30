@@ -10,43 +10,32 @@
  */
 #define F_CPU 16000000UL
 #include "utils_act.h"
-#include "activity.h"
+#include "inc/activity1.h"
+#include "inc/activity2.h"
+#include "inc/activity3.h"
+#include "inc/activity4.h"
+
+
 
 #include <avr/io.h>
 #include <util/delay.h>
 #include <avr/interrupt.h>
 
-void setUp();
-void activity1();
-
+void setUp(void);
 int main(void)
 {
     setUp();
     activity1();
     activity2();
-
-
-    // Insert code
-
-    while(1)
-    {
-        if(!(PIND & (1<<PD0))){
-            PORTB |= (1<<PB0);
-        }
-        else{
-            PORTB &= ~(1<<PB0);
-        }
-        if(!(PINC & (1<<PC0))){
-            PORTB |= (1<<PB1);
-        }
-        else{
-            PORTB &= ~(1<<PB1);
-        }
-    }
+    
 
     return 0;
 }
-void setUp(){
+/**
+ * @brief Set the Up object
+ * helps in setting up the initial pins
+ */
+void setUp(void){
     DDRB |= (1<<PB0); //Led indicating Passenger is seated
     DDRB |= (1<<PB1); //Led Indication Heater is ON
     DDRD &= ~(1<<PD0); //Input switch taking from seat sensor
@@ -54,29 +43,5 @@ void setUp(){
     PORTD |= (1<<PD0);
     PORTD |= (1<<PD2);
     DDRC&=~(1<<PC0);
-    PORTC|=(1<<PC0);
-    EICRA |= (1<<ISC01); //enabling external code.
-    EIMSK |= (1<<INT0);
-    sei();
-}
-void activity1(){
-    while(1)
-    {
-        //temp = readADC(0);
-        _delay_ms(20);
-        if(!(PIND & (1<<PD0))){
-            PORTB |= (1<<PB0);
-        }
-        else{
-            PORTB &= ~(1<<PB0);
-        }
-        if(!(PIND & (1<<PD2))){
-            PORTB |= (1<<PB1);
-            _delay_ms(5);
-        }
-
-        else{
-            PORTB &= ~(1<<PB1);
-        }
-    }
+    PORTC|=(1<<PC0);    //ADC Channel0
 }
