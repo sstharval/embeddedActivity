@@ -1,14 +1,15 @@
-PROJ_NAME = Blinky
+PROJ_NAME = carSensor
 
 BUILD_DIR = Build
 
 # All Source code files
 SRC = carTempSensor.c\
-src/user_utils.c
+src/activity.c\
+src/utils_act.c\
 
 # All header file paths
 INC = -I inc
-
+#Dont touch this part********************************************************************
 # Find out the OS and configure the variables accordingly
 ifdef OS	# All configurations for Windwos OS
 # Correct the path based on OS
@@ -27,7 +28,7 @@ else #All configurations for Linux OS
 	  AVR_OBJ_CPY = avr-objcopy 
    endif
 endif
-
+#Dont touch this part********************************************************************
 # Command to make to consider these names as targets and not as file names in folder
 .PHONY:all analysis clean doc
 
