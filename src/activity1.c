@@ -4,6 +4,12 @@
 #include "activity1.h"
 
 void activity1(void){
+    DDRB |= (1<<PB0); //Led indicating Passenger is seated
+    DDRB |= (1<<PB1); //Led Indication Heater is ON and also output to CRO
+    DDRD &= ~(1<<PD0); //Input switch taking from seat sensor
+    DDRD &= ~(1<<PD2); //Input for Switching on the Heater.
+    PORTD |= (1<<PD0);
+    PORTD |= (1<<PD2);
     while(1)
     {
         //temp = readADC(0);

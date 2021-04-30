@@ -8,8 +8,8 @@
  * @copyright Copyright (c) 2021
  * 
  */
-#ifndef __ACTIVITY_2_H
-#define __ACTIVITY_2_H
+#ifndef __ACTIVITY_2_H_
+#define __ACTIVITY_2_H_
 
 
 /**

@@ -8,8 +8,8 @@
  * @copyright Copyright (c) 2021
  * 
  */
-#ifndef __ACTIVITY_1_H
-#define __ACTIVITY_1_H
+#ifndef __ACTIVITY_1_H_
+#define __ACTIVITY_1_H_
 
 /**
  * @brief Activity 1

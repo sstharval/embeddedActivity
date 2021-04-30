@@ -8,8 +8,8 @@
  * @copyright Copyright (c) 2021
  * 
  */
-#ifndef __ACTIVITY_3_H
-#define __ACTIVITY_3_H
+#ifndef __ACTIVITY_3_H_
+#define __ACTIVITY_3_H_
 /**
  * @brief The Timer Function is initialized
  * 

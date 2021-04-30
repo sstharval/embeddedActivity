@@ -1,5 +1,5 @@
-#ifndef __ACTIVITY_4_H
-#define __ACTIVITY_4_H
+#ifndef __ACTIVITY_4_H_
+#define __ACTIVITY_4_H_
 /**
  * @brief function to define the communication channel baud rate
  * Baud Rate - defines the rate at which bits are transferred.
