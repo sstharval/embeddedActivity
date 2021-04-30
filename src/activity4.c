@@ -30,6 +30,6 @@ void USARTWriteChar( uint16_t data){
 }
 
 
-void activity4(int temperature_read){
+void activity4(uint16_t temperature_read){
     USARTWriteChar(temperature_read);
 }
