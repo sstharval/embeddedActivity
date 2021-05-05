@@ -24,11 +24,12 @@
 
 int main(void)
 {
+    while(1){
     activity1();// Activity 1 called
     activity2();// Activity 2 called
     activity3();// Activity 3 called
     activity4(0);// Activity 4 called // have initialized this zero for causing no error
-
+    }
     return 0;
 }
 
